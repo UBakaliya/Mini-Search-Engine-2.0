@@ -24,8 +24,10 @@
 
 #### \* Map and Sets (Used for testing)
 
-### Test Frame work Used: 
-#### GTest has been used for the program test
-<!-- #### To get started with GTest take a look at:  -->
-[To get started with GTest take a look at: ](https://github.com/google/googletest)
+### Test Frame work Used:
 
+#### GTest has been used for the program test
+
+<!-- #### To get started with GTest take a look at:  -->
+
+[To get started with GTest take a look at _GTest_ ](https://github.com/google/googletest)
