@@ -1,15 +1,8 @@
-/**********************************
-*@title Program 2 : Search (using search.h & main.cpp)
-*@file This is 'main.cpp' file
-*@author Uvaish Bakaliya
-*@details The main.cpp is the file where all the code is going to run
-and will be tested.
-***********************************/
-#include "search.h"
-using namespace std;
-
-int main()
-{
-
-    return 0;
-}
+/**
+ * @file main.cpp
+ * @author your name (you@domain.com)
+ * @brief
+ * @version 0.1
+ * @date 2022-12-09
+ * @copyright Copyright (c)UB 2022
+ */

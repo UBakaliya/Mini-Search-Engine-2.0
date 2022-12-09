@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I"/Users/uvaishbakaliya/Documents/Code Base/Mini-Search-Engine/build/_deps/googletest-src/googletest/include" -I"/Users/uvaishbakaliya/Documents/Code Base/Mini-Search-Engine/build/_deps/googletest-src/googletest"
 
-CXX_FLAGSarm64 = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++14
+CXX_FLAGSarm64 = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++14
 
-CXX_FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++14
+CXX_FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++14
 
