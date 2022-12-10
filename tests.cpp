@@ -5,5 +5,5 @@
  * @date 2022-12-09
  * @copyright Copyright UB 2022
  */
-#include "search.h"
+#include "prog.h"
 #include <gtest/gtest.h> // Must have for google test fram work

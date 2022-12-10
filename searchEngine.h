@@ -12,18 +12,13 @@
     or multiple terms.
  * @version 0.1
  * @date 2022-12-09
- * @copyright Copyright (c)UB 2022
+ * @copyright Copyright © 2022 UB
+ * @note Feel free to use it/edit it.
  */
 
 #pragma once
 
-#include <algorithm>
-#include <fstream>
 #include <iostream>
-#include <map>
-#include <set>
-#include <sstream>
-
 using namespace std;
 
 class SearchEngine

@@ -2,17 +2,21 @@
 
 ## A program that can search any queries and will provide relevant URLs for that specific query. using the '-', '+' or a single word. Hope you enjoy playing around with it! 😀
 
+---
+
 ### Descriptions:
 
 #### \* A mini search engine is a simplified version of a traditional search engine that is designed to handle a smaller set of data and provide quick, relevant search results. It typically uses a basic algorithm to index and rank the available data, and provides a user-friendly interface for users to input their search queries and view the results.
 
 #### \* Overall, a mini search engine aims to provide efficient and effective search capabilities to users, without the complexity and scale of a full-fledged search engine.
 
+---
+
 ### Main take away:
 
 #### ...
 
-### You will learn:
+### You will learn(If you are using my program):
 
 #### ...
 
@@ -26,8 +30,7 @@
 
 ### Test Frame work Used:
 
-#### GTest has been used for the program test
+#### [GTest](https://github.com/google/googletest)\* Frame work is used for this program to Testing
+---
 
-<!-- #### To get started with GTest take a look at:  -->
-
-[To get started with GTest take a look at _GTest_ ](https://github.com/google/googletest)
+### For step by step process and understanding please refer to ```documentation.md```
