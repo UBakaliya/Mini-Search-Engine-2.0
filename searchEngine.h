@@ -10,15 +10,13 @@
     Furthermore for '-' the program will return removed term or multiple terms.
     And for space "' '" the program will give matching terms or two terms
     or multiple terms.
- * @version 0.1
  * @date 2022-12-09
  * @copyright Copyright © 2022 UB
- * @note Feel free to use it/edit it.
+ * @note Feel free to use edit how every you please.
  */
 
 #pragma once
 
-#include <iostream>
 using namespace std;
 
 class SearchEngine

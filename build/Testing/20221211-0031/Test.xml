@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20221211-0031-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.24.2"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="macOS"
+	Hostname="Uvaishs-MacBook-Air.local"
+	OSRelease="13.0"
+	OSVersion="22A380"
+	OSPlatform="arm64"
+	Is64Bits="1"
+	VendorString="IBM"
+	VendorID="IBM"
+	FamilyID="16777228"
+	ModelID="2"
+	ProcessorCacheSize="131072"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="2048"
+	TotalPhysicalMemory="8192"
+	LogicalProcessorsPerPhysical="8"
+	ProcessorClockFrequency="0"
+	>
+	<Testing>
+		<StartDateTime>Dec 10 18:31 CST</StartDateTime>
+		<StartTestTime>1670718719</StartTestTime>
+		<TestList>
+			<Test>./Graph.addV_addE_getW</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>Graph.addV_addE_getW</Name>
+			<Path>.</Path>
+			<FullName>./Graph.addV_addE_getW</FullName>
+			<FullCommandLine>/Users/uvaishbakaliya/Documents/Code\ Base/Mini-Search-Engine/build/tests "--gtest_filter=Graph.addV_addE_getW" "--gtest_also_run_disabled_tests"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.00346633</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/Users/uvaishbakaliya/Documents/Code\ Base/Mini-Search-Engine/build/tests "--gtest_filter=Graph.addV_addE_getW" "--gtest_also_run_disabled_tests"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNUctOwzAQvPsr9tgcHMMVqQegUQ6IghIKhyiKnHibWDh25EcRf08eVdUiVTAHa1cz9uyss6C11C30XOpVBHtremA7h9axcODSdTX/5Ep+c7YxTehRe8cejUB44A7Zs9SS5sht09FEt1Ijq4NUglUCB8daY1qFHp2nzjZnLZvbqaom47hpyNZ4vIN0lsDbyMBeKo8W1pBaPnQxF+K9Go+katF/kGJ9QgnZMcUt+PnmlOJYuyA9xqSgJ5SQKlNztfCoD9IaPSUDh56G4Zf4/M15ElJAttvCjPLKcAsLL09XFLC6gd5FfzgtKvDGcxWR/2Xw429QYb705YaubQYs1/Glzzj8632eJ5sp3qKNyQ8r0bD9====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Dec 10 18:31 CST</EndDateTime>
+		<EndTestTime>1670718719</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

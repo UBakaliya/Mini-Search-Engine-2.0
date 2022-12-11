@@ -3,7 +3,8 @@
  * @author Uvaish Bakaliya
  * @brief This the file where we test our code!
  * @date 2022-12-09
- * @copyright Copyright UB 2022
+ * @copyright Copyright © UB 2022
+ * @note Feel free to use edit how every you please.
  */
 #include "graph.h"
 #include <ctime>
@@ -36,7 +37,7 @@ string genRandomStr()
 TEST(Graph, addV_addE_getW)
 {
     TIME_RAND;
-    unordered_set<string> randEle;
+    set<string> randEle;
     graph G;
     size_t n = 100;
     for (int i = 0; i < n; i++)
