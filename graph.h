@@ -11,6 +11,8 @@
 #pragma once
 #include <iostream>
 #include <unordered_map>
+#include <unordered_set>
+
 using namespace std;
 
 template <typename vertexT, typename weightT>
@@ -23,12 +25,12 @@ private:
      */
     struct vertexData
     {
-        vertexT url;
-        vertexT description;
+        unordered_map<vertexT, weightT> edge;
+        vertexT urls;
     };
-
-    typedef unordered_map<vertexData, weightT> edge;
-    unordered_map<vertexData, edge> adjList;
+    size_t edgeCounter;
+    // keys are going to be the description --> url and edge
+    unordered_map<vertexT, vertexData> adjList;
 
     /**
      * @brief the function are private because we are going to run the
@@ -40,12 +42,40 @@ private:
     void BFS() const;
 
 public:
-    void addVertex(vertexT vertex) const;
-    void addEdge(vertexT from, vertexT to, weightT weight) const;
-    weightT getWeight(vertexT from, vertexT) const;
+    Graph() { this->edgeCounter = 0; }
+    ~Graph() { this->adjList.clear(); }
+    size_t size() { return this->adjList.size(); }
+    void addVertex(vertexT url, vertexT descript)
+    {
+        if (this->adjList.find(descript) != this->adjList.end())
+        {
+            // Insert it into linked list
+            return;
+        }
+        adjList[descript].urls = url;
+    }
+    void addEdge(vertexT from, vertexT to, weightT weight)
+    {
+        this->adjList[from].edge[to] = weight;
+        this->edgeCounter++;
+    }
+    weightT getWeight(vertexT from, vertexT to)
+    {
+        weightT weight;
+        return (weight = this->adjList[from].edge[to]);
+    }
     void runDFS() const;
     void runBFS() const;
     void runAStartAlgo() const;
-    // Use full for testing
-    void dump(ostream &ouput);
+    // use full for testing
+    void dump(ostream &ouput)
+    {
+        for (const auto &i : adjList)
+        {
+            ouput << i.first << ": ";
+            for (const auto &j : i.second.edge)
+                ouput << '(' << j.first << ',' << j.second << ')' << ' ';
+            ouput << endl;
+        }
+    }
 };

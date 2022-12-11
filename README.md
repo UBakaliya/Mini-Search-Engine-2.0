@@ -31,6 +31,7 @@
 ### Test Frame work Used:
 
 #### [GTest](https://github.com/google/googletest)\* Frame work is used for this program to Testing
+
 ---
 
-### For step by step process and understanding please refer to ```documentation.md```
+#### For step by step process and understanding please refer to `stepByStep.md`

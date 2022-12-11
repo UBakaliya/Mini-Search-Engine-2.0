@@ -19,6 +19,7 @@ private:
         Node *next;
     };
     Node *head;
+    size_t size;
     // freeing the memory like a good programme
     void freeMemory()
     {
@@ -31,8 +32,13 @@ private:
     }
 
 public:
-    LinkedList() { this->head = nullptr; }
+    LinkedList()
+    {
+        this->head = nullptr;
+        this->size = 0;
+    }
     ~LinkedList() { freeMemory(); }
+    size_t size() { return this->size; }
     // NOTE: The insertion will be in 'descending' order
     void insert(LLT val);
     // checks the value exists inside of the list
