@@ -13,7 +13,7 @@
 #include "linkedList.h"
 #include <iostream>
 #include <map>
-#include <set>
+#include <queue>
 #include <unordered_map>
 using namespace std;
 
@@ -27,11 +27,11 @@ private:
      */
     struct graphData
     {
-        unordered_map<vertexT, weightT> edge;
+        unordered_map<vertexT, weightT> edges;
         LinkedList<vertexT> urls;
     };
-    size_t edgeCounter;
-    // keys are going to be the description --> url and edge
+    size_t edgesCounter;
+    // keys are going to be the description --> url and edges
     map<vertexT, graphData> adjList;
 
     /**
@@ -39,44 +39,80 @@ private:
      *   function through Other function, and also we don't want to give access
      *   to user.
      */
-    void AStartAlgo() const;
-    void DFS() const;
-    void BFS() const;
+    void privateDFS(
+        vertexT v, vector<vertexT> &dfsData, map<vertexT, bool> &visited)
+    {
+        visited[v] = true;
+        dfsData.push_back(v);
+        for (const auto &i : this->adjList[v].edges)
+        {
+            if (!visited[i.first])
+                privateDFS(i.first, dfsData, visited);
+        }
+    }
+
+    vector<vertexT> privateBFS(vertexT v)
+    {
+        queue<vertexT> q;
+        vector<vertexT> dfsData;
+        q.push(v);
+        map<vertexT, bool> visited;
+        visited[v] = true;
+        while (!q.empty())
+        {
+            vertexT frontV = q.front();
+            q.pop();
+            dfsData.push_back(frontV);
+            for (const auto &i : this->adjList[v].edges)
+            {
+                if (!visited[i.first])
+                {
+                    q.push(i.first);
+                    visited[i.first] = true;
+                }
+            }
+        }
+        return dfsData;
+    }
 
 public:
-    Graph() { this->edgeCounter = 0; }
+    Graph() { this->edgesCounter = 0; }
 
     ~Graph() { this->adjList.clear(); }
 
     size_t size() { return this->adjList.size(); }
 
-    void addVertex(vertexT descriptWord, vertexT url)
-    {
-        adjList[descriptWord].urls.insert(url);
-    }
+    void addVertex(vertexT descriptWord, vertexT url) { this->adjList[descriptWord].urls.insert(url); }
 
     void addEdge(vertexT from, vertexT to, weightT weight)
     {
-        this->adjList[from].edge[to] = weight;
-        this->edgeCounter++;
+        this->adjList[from].edges[to] = weight;
+        this->edgesCounter++;
     }
 
     weightT getWeight(vertexT from, vertexT to)
     {
-        weightT weight = this->adjList[from].edge[to];
+        weightT weight = this->adjList[from].edges[to];
         return weight;
     }
 
-    void runDFS() const;
-    void runBFS() const;
-    void runAStartAlgo() const;
+    vector<vertexT> DFS(vertexT v)
+    {
+        vector<vertexT> dfsData;
+        map<vertexT, bool> visited;
+        privateDFS(v, dfsData, visited);
+        return dfsData;
+    }
+
+    vector<vertexT> BFS(vertexT v) { return privateBFS(v); }
+
     // use full for testing
-    void dump(std::ostream &ouput)
+    void dump(ostream &ouput)
     {
         for (const auto &i : adjList)
         {
             ouput << i.first << ": ";
-            for (const auto &j : i.second.edge)
+            for (const auto &j : i.second.edges)
                 ouput << '(' << j.first << ',' << j.second << ')' << ' ';
             ouput << endl;
         }

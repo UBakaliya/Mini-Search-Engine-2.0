@@ -68,4 +68,5 @@ TEST(Graph, addV_addE_getW)
         EXPECT_EQ(weights[i], weight);
     }
     EXPECT_EQ(randEle.size(), G.size());
+
 }

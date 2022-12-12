@@ -30,4 +30,8 @@
 
 #### Code for singly linked list written in `linkedList.h`
 
+#### `insert()` &larr; For inserting in a Linked List
+
+#### `contains()` &larr; Check if a value is exists in linked list
+
 ---

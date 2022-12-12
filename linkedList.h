@@ -16,18 +16,18 @@
 #include <iostream>
 #include <ostream>
 
-template <typename LLT>
+template <typename ValueT>
 class LinkedList
 {
 private:
     struct Node
     {
-        LLT value;
+        ValueT value;
         Node *next;
     };
     Node *head;
     size_t size;
-    // freeing the memory like a good programme
+    // freeing the memory like a good programmer
     void freeMemory()
     {
         // freeing the memory like a good programmer
@@ -45,12 +45,12 @@ public:
         this->size = 0;
     }
 
-    ~LinkedList() { freeMemory(); }
+    ~LinkedList() { this->freeMemory(); }
 
     size_t listSize() { return this->size; }
 
     // insertion will be in 'descending' order
-    void insert(LLT value)
+    void insert(ValueT value)
     {
         // Create the new node
         Node *newNode = new Node;
@@ -81,7 +81,7 @@ public:
     }
 
     // checks the value exists inside of the list
-    bool contains(LLT value)
+    bool contains(ValueT value)
     {
         // Traverse the linked list
         Node *curr = head;
@@ -99,7 +99,7 @@ public:
         return false;
     }
 
-    void clear() { freeMemory(); }
+    void clear() { this->freeMemory(); }
 
     // Use full for testing
     void dump(std::ostream &ouput)
