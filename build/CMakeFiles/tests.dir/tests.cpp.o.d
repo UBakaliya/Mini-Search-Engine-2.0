@@ -1,7 +1,7 @@
 CMakeFiles/tests.dir/tests.cpp.o: \
   /Users/uvaishbakaliya/Documents/Code\ Base/Mini-Search-Engine/tests.cpp \
-  /Users/uvaishbakaliya/Documents/Code\ Base/Mini-Search-Engine/graph.h \
-  /Users/uvaishbakaliya/Documents/Code\ Base/Mini-Search-Engine/linkedList.h \
+  /Users/uvaishbakaliya/Documents/Code\ Base/Mini-Search-Engine/header_Files/graph.h \
+  /Users/uvaishbakaliya/Documents/Code\ Base/Mini-Search-Engine/header_Files/linkedList.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__config_site \

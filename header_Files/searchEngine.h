@@ -17,8 +17,6 @@
 
 #pragma once
 
-using namespace std;
-
 class SearchEngine
 {
 private:
