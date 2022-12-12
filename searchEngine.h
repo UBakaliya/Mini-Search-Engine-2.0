@@ -12,7 +12,7 @@
     or multiple terms.
  * @date 2022-12-09
  * @copyright Copyright © 2022 UB
- * @note Feel free to use edit how every you please.
+ * @note Feel free to edit how every you please.
  */
 
 #pragma once

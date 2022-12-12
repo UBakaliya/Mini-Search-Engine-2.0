@@ -4,7 +4,6 @@
  * @brief This the file where we test our code!
  * @date 2022-12-09
  * @copyright Copyright © UB 2022
- * @note Feel free to use edit how every you please.
  */
 #include "graph.h"
 #include <ctime>
@@ -68,5 +67,4 @@ TEST(Graph, addV_addE_getW)
         EXPECT_EQ(weights[i], weight);
     }
     EXPECT_EQ(randEle.size(), G.size());
-
 }
